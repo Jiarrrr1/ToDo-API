@@ -91,6 +91,52 @@ exports.patchUpdate = async (req, res) => {
     }
 };
 
+exports.changeTime = async (req, res) => {
+    try {
+        const { taskId, newTime } = req.body;
+
+        const user = await User.findOne({ email: req.user.email });
+
+        if (!user) {
+            return res.status(404).json({ 
+                message: 'User not found' 
+            });
+        }
+
+        if (!user.taskList.includes(taskId)) {
+            return res.status(404).json({ 
+                message: 'Task not found in user task list' 
+            });
+        }
+
+        const updatedTask = await Todo.findByIdAndUpdate(
+            taskId,
+            { timeToDo: newTime },
+            { 
+                runValidators: true,
+                new: true, 
+            }
+        );
+
+        if (!updatedTask) {
+            return res.status(404).json({ 
+                message: 'Task not found' 
+            });
+        }
+
+        res.status(200).json({ 
+            message: 'Time Changed ', 
+            content: updatedTask 
+        });
+        
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ 
+            error: 'Internal Server Error' 
+        });
+    }
+};
+
 exports.deleteTodo = async (req, res) => {
     const activeUser = req.user._id; 
     const taskId = req.params.id;
