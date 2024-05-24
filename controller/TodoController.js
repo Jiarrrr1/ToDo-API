@@ -21,7 +21,7 @@ exports.getTodo = async (req, res) => {
     }
 }
 
-exports.postCreate = async (req, res) => {
+exports.createTask = async (req, res) => {
     const {taskname, time} = req.body;
     try{
         //Query the user currently loggedin
@@ -45,7 +45,7 @@ exports.postCreate = async (req, res) => {
     }   catch(err){}
 };
 
-exports.patchUpdate = async (req, res) => {
+exports.changeTask = async (req, res) => {
     try {
         const { taskId, newTaskData } = req.body;
 
