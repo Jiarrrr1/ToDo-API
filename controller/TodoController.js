@@ -24,18 +24,15 @@ exports.getTodo = async (req, res) => {
 exports.createTask = async (req, res) => {
     const {taskname, time} = req.body;
     try{
-        //Query the user currently loggedin
         const getCurrentUser = await User.findOne({_id: req.user._id});
         console.log(getCurrentUser);
         const newTask = new Todo({
             name:taskname,
             timeToDo: time,
         });
-        // saving task to Todo Model
         await newTask.save();
 
         getCurrentUser.taskList.push(newTask);
-        //saving task to tasklist of the User model
         await getCurrentUser.save();
 
         res.status(200).json({
