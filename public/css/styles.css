@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0C134F;
+}
+h1 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    color: #D4ADFC;
+    text-shadow: -2px -2px 0 #5C469C, 2px -2px 0 #5C469C, -2px 2px 0 #5C469C, 2px 2px 0 #5C469C;
+    letter-spacing:10px ;
+}
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 10rem;
+    font-family: sans-serif;
+}
+.index-header > h1 {
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    
+}
+
+.index-header {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    text-align: center;
+}
+
+.index-card {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.3rem;
+    text-transform:capitalize;
+}
+a {
+    text-decoration: none;
+}
+.index-card>a {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    letter-spacing: 5px;
+    background-color: #C8AAE4;
+    color: #1D267D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 5px;
+}
+
+.login-con {
+    margin-top: 5rem;
+    gap: 5rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #C8AAE4;
+    width: 25rem;
+    height: 28rem;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    margin-top: -2rem;
+    border-radius: 5px;
+}
+
+.email-con, .password-con, .name-con {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-left: 3.3rem;
+    width: max-content;
+}
+
+.email-con, .password-con, .name-con > label {
+    font-size: 1rem;
+    text-align: start;
+    letter-spacing: 2px;
+}
+
+input {
+    height: 2.5rem;
+    width: 17rem;
+    outline: none;
+    border: .2px solid #5526c4;
+    text-align: start;
+    border-radius: 5px;
+    text-align: left;
+    padding: .5rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    margin: 1.5rem;
+    background-color: #5526c4;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 18.5rem;
+    margin: 0 auto;
+    border: none;
+    color: aliceblue;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    transition: all ease-in-out .3s;
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.01);
+    cursor: pointer;
+}
+
+.oth-option {
+    font-size: 1rem;
+    line-height: 2;
+
+}
+
+.oth-option > a {
+    color: #5526c4;
+    letter-spacing: 2px;
+}
+/* home page UI */
+
+.index-card>h1 {
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.goToRegister, .goToLogin  {
+    padding: 1rem 2rem;
+    margin: 1.5rem;
+    background-color: #5526c4;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 7rem;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+/* Login Page UI */
+
+.login-con {
+    margin-top: 3rem;
+}
+
+.login-form {
+    height: 25rem;
+}
+
+/* Register Page Ui */
+.register-con {
+    margin-top: 3rem;
+}
+
+.register-form {
+    margin-top: 1rem;
+    height: 30rem;
+}
+.register-form >.oth-option {
+    margin-top: -1rem;
+}
