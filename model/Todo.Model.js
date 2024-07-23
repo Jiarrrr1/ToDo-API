@@ -9,9 +9,6 @@ const todoSchema = new mongoose.Schema({
         type: String,
         default: false,
       },
-      timeToDo: {
-        type: String,
-      },
       createdAt: {
         type: String,
         default: setDateValue(),

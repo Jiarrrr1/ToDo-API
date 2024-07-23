@@ -5,7 +5,7 @@ const verifyUser = require("../middleware/VerifyToken");
 
 const router = express.Router();
 // Todo Controller
-router.get('/access', verifyUser.verifyToken, todoController.getTodo)
+router.get('/access', todoController.getTodo)
 router.post('/add', verifyUser.verifyToken, todoController.createTask)
 router.patch('/change/', verifyUser.verifyToken, todoController.changeTask)
 router.patch('/changetime', verifyUser.verifyToken, todoController.changeTime)
