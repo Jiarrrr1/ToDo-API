@@ -12,10 +12,12 @@ const userRoutes = require('./routes/UserRoutes');
 
 const corsOptions = {
     origin: 'http://localhost:5173',
-    methods: 'GET, POST, PUT, DELETE',
+    methods: 'GET, POST, PATCH, DELETE',
     allowedHeaders: 'Content-Type, Authorization',
     credentials: true
 };
+
+
 
 app.use(morgan("dev"));
 app.use(cors(corsOptions));
